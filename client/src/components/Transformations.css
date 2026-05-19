@@ -1,0 +1,159 @@
+.transformations { background: var(--bg-2); }
+
+.trans-layout {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+/* Showcase */
+.trans-showcase {
+  padding: 40px;
+  border-radius: var(--radius-lg) !important;
+}
+
+.trans-before-after {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.trans-ba-card {
+  flex: 1;
+  background: var(--bg-2);
+  border-radius: var(--radius);
+  padding: 28px 20px;
+  text-align: center;
+  border: 1px solid var(--border);
+  transition: all 0.3s ease;
+}
+.trans-ba-card.trans-after {
+  background: linear-gradient(135deg, rgba(255,90,31,0.06), rgba(230,57,70,0.04));
+  border-color: rgba(255,90,31,0.2);
+}
+.trans-ba-emoji { font-size: 3rem; margin-bottom: 10px; }
+.trans-ba-weight {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.4rem;
+  letter-spacing: 2px;
+  color: var(--text);
+}
+.trans-ba-card.trans-after .trans-ba-weight { background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.trans-ba-label { font-size: 0.8rem; color: var(--text-3); font-weight: 600; margin-top: 4px; }
+
+.trans-arrow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+.trans-arrow-icon {
+  font-size: 2rem;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.trans-duration { font-size: 0.72rem; font-weight: 700; color: var(--text-3); }
+
+.trans-stats-row {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+.trans-stat-pill {
+  flex: 1;
+  text-align: center;
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 12px 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.trans-stat-pill span:first-child { font-family: 'Bebas Neue', sans-serif; font-size: 1.4rem; letter-spacing: 1px; }
+.trans-stat-pill span:last-child { font-size: 0.72rem; color: var(--text-3); font-weight: 600; }
+
+.trans-quote {
+  font-size: 0.95rem;
+  color: var(--text-2);
+  line-height: 1.75;
+  font-style: italic;
+  margin-bottom: 8px;
+  padding: 20px;
+  background: var(--bg-2);
+  border-radius: 12px;
+  border-left: 3px solid var(--primary);
+  position: relative;
+}
+.trans-quote-mark {
+  font-size: 3rem;
+  line-height: 1;
+  color: var(--primary);
+  opacity: 0.3;
+  font-family: 'Bebas Neue', sans-serif;
+  position: absolute;
+  top: 8px; left: 14px;
+}
+.trans-member { font-size: 0.85rem; font-weight: 700; color: var(--text); margin-top: 10px; text-align: right; }
+
+/* Selector */
+.trans-selector {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.trans-sel-card {
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px 18px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: left;
+  width: 100%;
+  position: relative;
+}
+.trans-sel-card:hover { border-color: var(--primary); background: rgba(255,90,31,0.03); }
+.trans-sel-active {
+  border-color: var(--primary) !important;
+  background: linear-gradient(135deg, rgba(255,90,31,0.06), rgba(230,57,70,0.03)) !important;
+  box-shadow: 0 4px 16px rgba(255,90,31,0.12);
+}
+.trans-sel-emoji { font-size: 1.6rem; flex-shrink: 0; }
+.trans-sel-name { font-weight: 700; font-size: 0.9rem; color: var(--text); }
+.trans-sel-info { font-size: 0.78rem; color: var(--text-3); margin-top: 2px; }
+.trans-sel-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--primary);
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+.trans-cta-box {
+  background: linear-gradient(135deg, #1A1A2E, #16213E);
+  border-radius: var(--radius);
+  padding: 24px;
+  text-align: center;
+  margin-top: 4px;
+}
+.trans-cta-box p { color: rgba(255,255,255,0.8); font-size: 0.88rem; margin-bottom: 14px; }
+
+@media (max-width: 900px) {
+  .trans-layout { grid-template-columns: 1fr; }
+  .trans-selector { display: grid; grid-template-columns: 1fr 1fr; }
+  .trans-cta-box { grid-column: 1 / -1; }
+}
+@media (max-width: 560px) {
+  .trans-selector { grid-template-columns: 1fr; }
+  .trans-showcase { padding: 24px; }
+  .trans-before-after { gap: 12px; }
+}

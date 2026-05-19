@@ -1,0 +1,116 @@
+.bmi { background: var(--bg); }
+
+.bmi-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.bmi-benefits { margin-top: 28px; display: flex; flex-direction: column; gap: 12px; }
+.bmi-benefit {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.92rem;
+  color: var(--text-2);
+}
+.bmi-check {
+  width: 24px; height: 24px;
+  border-radius: 50%;
+  background: rgba(255,90,31,0.1);
+  border: 1px solid rgba(255,90,31,0.25);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+/* Card */
+.bmi-card {
+  padding: 36px;
+  border-radius: var(--radius-lg) !important;
+}
+.bmi-card-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 28px;
+  text-align: center;
+  letter-spacing: 0;
+}
+
+.bmi-form { display: flex; flex-direction: column; gap: 20px; }
+.bmi-field { display: flex; flex-direction: column; }
+.bmi-input { font-size: 1rem; padding: 14px 18px; }
+.bmi-btn { width: 100%; justify-content: center; padding: 15px; font-size: 1rem; }
+
+/* Result */
+.bmi-result { text-align: center; }
+.bmi-score {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 5rem;
+  letter-spacing: 4px;
+  line-height: 1;
+  margin-bottom: 12px;
+}
+.bmi-category {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 6px 20px;
+  border-radius: 50px;
+  margin-bottom: 24px;
+}
+
+/* Progress bar */
+.bmi-bar-wrap { margin-bottom: 20px; }
+.bmi-bar-track {
+  height: 10px;
+  border-radius: 5px;
+  overflow: visible;
+  display: flex;
+  position: relative;
+  margin-bottom: 6px;
+}
+.bmi-bar-seg { height: 100%; }
+.bmi-bar-seg:first-child { border-radius: 5px 0 0 5px; }
+.bmi-bar-seg:last-child { border-radius: 0 5px 5px 0; }
+.bmi-bar-marker {
+  position: absolute;
+  top: -4px;
+  width: 18px; height: 18px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  transform: translateX(-50%);
+  transition: left 0.6s cubic-bezier(.175,.885,.32,1.275);
+}
+.bmi-bar-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.68rem;
+  color: var(--text-3);
+  margin-top: 8px;
+}
+
+.bmi-tip {
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 14px 16px;
+  font-size: 0.85rem;
+  color: var(--text-2);
+  text-align: left;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+.bmi-result-ctas { display: flex; flex-direction: column; gap: 10px; }
+
+@media (max-width: 900px) {
+  .bmi-layout { grid-template-columns: 1fr; gap: 40px; }
+}
