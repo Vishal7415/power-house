@@ -1,0 +1,11 @@
+{
+  "name": "the-fitness-empire-root",
+  "version": "1.0.0",
+  "description": "Root configuration to run client and server concurrently",
+  "scripts": {
+    "install-all": "npm install --prefix client && npm install --prefix server",
+    "client": "npm run dev --prefix client",
+    "server": "npm run dev --prefix server",
+    "dev": "npx concurrently --kill-others \"npm run server\" \"npm run client\""
+  }
+}
